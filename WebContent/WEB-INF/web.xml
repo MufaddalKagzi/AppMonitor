@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>AppMonitor</display-name>
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+  <listener>
+    <listener-class>com.tcs.appmonitor.util.ApplicationGenerator</listener-class>
+  </listener>
+  <listener>
+    <listener-class>com.tcs.appmonitor.util.LogContextListener</listener-class>
+  </listener>
+  <context-param>
+    <param-name>properties.file</param-name>
+    <param-value>app.properties</param-value>
+  </context-param>
+  <context-param>
+    <param-name>log4j-config-location</param-name>
+    <param-value>WEB-INF/log4j.properties</param-value>
+  </context-param>
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
